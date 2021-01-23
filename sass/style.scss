@@ -1,0 +1,329 @@
+@import "__variable";
+@import "__default";
+@import "__extend";
+
+
+
+header{
+
+	background-color: $bg_color;
+	.navbar-brand {
+		img{
+			
+			max-width:250px;
+		}
+	}
+
+	.navbar-light{
+		.navbar-nav {
+			
+			li {
+
+				margin:2px;
+
+				.nav-link{
+					color: $primary_Color;
+					@extend %button_Style;
+
+
+	    			&:hover{
+						background-color: $secondary_Color;
+						color: #fff !important;
+					}
+				}
+
+				&:last-child a {
+					background-color: $secondary_Color;
+					color: #fff !important;
+				}
+
+				
+			}
+		}
+	}
+
+
+	.banner-section{
+		border-bottom: 2px solid transparent;
+		
+		h4{
+
+			color: red;
+
+		}
+
+		h1{
+			font-size: 50px;
+		    font-weight: bold;
+		    padding: 0px 0px;
+		    color: $primary_Color;
+		    line-height: 1.5;
+
+		    
+			span {
+				color: $secondary_Color;
+			}
+
+		}
+
+		p{
+			margin: 20px 0px;
+    		color: $sub_Heading;
+    		font-size: 18px;
+    		line-height: 1.8;
+		}
+
+		
+
+		img{
+			max-width: 100%;
+		}
+
+	}
+}
+
+.btn-custom{
+				background-color: $secondary_Color;
+				color: #fff !important;
+				border: 2px solid $secondary_Color;
+				margin-top: 5px;
+				@extend %button_Style;
+
+				&:hover{
+					background-color: #fff !important;
+					color: $secondary_Color;
+					border: 2px solid $secondary_Color;
+				}
+			
+		}
+
+.feature-section{
+
+	.feature{
+		text-align: center;
+	    padding: 30px;
+	    display: block;
+		background-color: $bg_color;
+		border: 2px solid transparent;
+		height: 300px;
+		img{
+			max-width: 50%;
+    		height: 100px;
+		}
+
+		h2{
+			font-weight: 500;
+		    font-size: 22px;
+		    padding-top: 40px;
+		    color: $primary_Color;
+
+		}
+
+		p{
+			color: $sub_Heading;
+			font-size: 18px;
+		}
+
+		&:hover{
+		background-color: #fff;
+		border: 2px solid transparent;
+	    border-radius: 10px;
+	    box-shadow: 0px 0px 20px 10px #00000012;
+	    @extend %transition;
+		}
+	}
+
+}
+
+.course-section {
+
+	h1{
+		text-align: center;
+		color: $primary_Color;
+		padding-bottom: 50px;
+	}
+
+	.course{
+		padding:25px 20px;
+		box-shadow: 0px 0px 15px 10px #00000012;
+    	border: 0px;
+    	border-radius: 12px;
+		.header-img{
+
+			img {
+			width:100%;
+			
+			}
+
+		}
+
+		.card-body{
+
+			h5{
+				font-size : 25px;
+				color: $primary_Color;
+			}
+
+			p{
+				color: $sub_Heading;
+				font-size: 18px;
+			}
+
+			ul {
+				margin-top: 30px;
+				align-items: center;
+				
+				li {
+					
+					img{
+						width: 20px;
+						
+
+					}
+					span{
+						font-weight: 500;
+						color: #585859;
+						font-size: 14px;
+
+					}
+				}
+			}
+
+		}
+
+		
+
+	}
+	
+}
+
+.testimonial-section{
+	margin: 50px 0px;
+	.header{
+
+		h1{
+			text-align: center;
+			color: $primary_Color;
+			padding-bottom: 20px;
+		}
+	}
+
+	img{
+		width:100%;
+		border: 5px solid $secondary_Color;
+    	border-radius: 200px;
+	}
+
+	p {
+		color: $sub_Heading;
+		font-size: 18px;
+	}
+}
+
+footer{
+	background-image: url(../images/footer.jpg);
+    background-color: #2c2644 !important;;
+    color: #fff;
+    font-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: darken;
+    background-size: cover;
+
+    border-top:8px solid $secondary_Color;
+
+	h5{
+		font-weight: 600;
+	}
+
+	.copyright{
+		text-align: center;
+		font-size: 18px;
+		padding-top: 50px;
+		p{
+
+		}
+		a{
+			color:$secondary_Color;
+			text-decoration: none;
+
+			&:hover{
+				color: #fff !important;
+			}
+		}
+	}
+}
+
+
+@media (max-width: 1199px){
+
+}
+
+@media (max-width: 991px){
+	
+}
+
+@media (max-width: 767px){
+	
+}
+
+@media (max-width: 575px){
+	.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    list-style: none;
+    align-items: center;
+	}
+
+	header .banner-section h1 {
+    font-size: 40px;
+	
+	}
+	header .banner-section img {
+    
+    padding-top: 30px;
+	}
+	
+	header .banner-section{
+		text-align: center;
+	}
+
+	.testimonial-section img {
+    
+    margin: 30px 0px;
+	}
+
+	.testimonial-section p {
+    
+    font-size: 15px;
+    text-align: center;
+	}
+
+	.testimonial-section {
+    margin: 0px 0px; 
+	}
+
+	footer{
+		text-align: center;
+
+	}
+
+	footer .header {
+		margin: auto;
+
+	}
+	footer .col-4{
+		width: 100%;
+	    padding: 0px;
+	    font-weight: 200;
+	    font-size: 14px;
+	    margin-bottom: 0px;
+	}
+
+	
+}
+
+
